@@ -474,6 +474,7 @@ header > .container {
   align-items: center;
   justify-content: space-between;
   gap: 15px;
+  color: #fff;
   transition: all 0.3s;
 }
 
@@ -511,6 +512,7 @@ header > .container {
   .nav-links.open > .link-item:hover,
   .nav-links.open > .link-item:active {
     background-color: var(--color-light);
+    color: #333;
   }
 }
 

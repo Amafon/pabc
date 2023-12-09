@@ -1,6 +1,8 @@
 const navLinks = document.querySelector(".nav-links");
 const menu = document.querySelector(".menu");
 const close = document.querySelector(".close");
+const btnContact = document.querySelector(".btn-contact");
+const sectionContact = document.querySelector(".section-contact");
 
 menu.addEventListener("click", function () {
   navLinks.classList.toggle("open");
@@ -19,4 +21,11 @@ navLinks.addEventListener("click", function (e) {
     behavior: "smooth",
   });
   navLinks.classList.toggle("open");
+});
+
+btnContact.addEventListener("click", function (e) {
+  e.preventDefault();
+  sectionContact.scrollIntoView({
+    behavior: "smooth",
+  });
 });
