@@ -115,6 +115,7 @@ body {
 .heading-primary {
   line-height: 1.1;
   margin-bottom: 3.5rem;
+  /* width: 50%; */
 }
 
 @media screen and (max-width: 750px) {
@@ -123,14 +124,69 @@ body {
   }
 }
 
+/* Section Home */
+#home {
+  height: 91dvh;
+  height: 91vh;
+  padding: 50px 0;
+  background-image: linear-gradient(
+      to left,
+      rgba(224, 240, 252, 20%),
+      rgba(0, 0, 0, 50%)
+    ),
+    url("images/img-1.webp");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.section-home .container {
+  padding: 0 20px;
+  display: flex;
+}
+
+.home-text {
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 4rem 16rem;
+  text-align: center;
+  /* width: 50%; */
+}
+
+.home-text a {
+  display: inline-block;
+}
+
+@media screen and (max-width: 900px) {
+  .home-text {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .heading-primary {
+    font-size: 4rem;
+  }
+
+  .home-description {
+    font-size: 2.5rem;
+  }
+}
+
 .home-description {
   margin-bottom: 6rem;
   line-height: 1.5;
+  font-size: 2.5rem;
 }
 
-@media screen and (max-width: 750px) {
+@media screen and (max-width: 320px) {
+  .heading-primary {
+    font-size: 3.5rem;
+  }
+
   .home-description {
-    margin-bottom: 3rem;
+    font-size: 2rem;
   }
 }
 
@@ -455,46 +511,6 @@ header > .container {
   .nav-links.open > .link-item:hover,
   .nav-links.open > .link-item:active {
     background-color: var(--color-light);
-  }
-}
-
-/* Section Home */
-#home {
-  height: 91dvh;
-  height: 91vh;
-  padding: 50px 0;
-  background-image: linear-gradient(
-      to left,
-      rgba(224, 240, 252, 20%),
-      rgba(0, 0, 0, 50%)
-    ),
-    url("images/img-1.webp");
-  background-size: cover;
-  background-position: center;
-}
-
-.section-home .container {
-  padding: 0 20px;
-  display: flex;
-}
-
-.home-text {
-  color: #fff;
-  background-color: rgba(0, 0, 0, 0.5);
-  padding: 4rem;
-}
-
-.home-text a {
-  display: inline-block;
-}
-
-@media screen and (max-width: 750px) {
-  .home-text {
-    padding: 2rem;
-  }
-
-  .heading-primary {
-    font-size: 4rem;
   }
 }
 
