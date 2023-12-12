@@ -759,6 +759,15 @@ header > .container {
   gap: 3rem 6rem;
 }
 
+@media screen and (max-width: 768px) {
+  .articles {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "section-articles"
+      "section-aside";
+  }
+}
+
 .section-articles {
   padding: 9.6rem 0;
   grid-area: section-articles;
@@ -773,12 +782,38 @@ header > .container {
   grid-area: section-aside;
 }
 
+@media screen and (max-width: 768px) {
+  .section-aside {
+    border-top: 1px solid var(--color-light);
+  }
+}
+
 /* Article */
 .article {
   display: grid;
   grid-template-columns: auto 1fr;
   gap: 2rem 3rem;
   line-height: 1.5;
+}
+
+@media screen and (max-width: 1300px) {
+  .article {
+    grid-template-columns: 1fr;
+  }
+
+  .article-img {
+    width: 100%;
+  }
+}
+
+.article_link {
+  display: inline-block;
+  height: 250px;
+  text-decoration: none;
+}
+
+.article-img {
+  height: 100%;
 }
 
 .article-block {
@@ -812,6 +847,7 @@ header > .container {
 }
 
 /* Aside */
+/* Aside - Categories*/
 
 .aside-categories {
   line-height: 1.5;
@@ -819,8 +855,8 @@ header > .container {
 
 .categories_title {
   font-weight: bold;
-  font-size: 2rem;
-  margin-bottom: 2rem;
+  font-size: 2.5rem;
+  margin: 5rem 0 3.5rem 0;
 }
 
 .category_list {
@@ -830,14 +866,97 @@ header > .container {
   gap: 1.5rem 0;
 }
 
-.category_list_item {
-  padding-bottom: 0.5rem;
+.category_link {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
   display: flex;
   justify-content: space-between;
+}
+
+.category_list_item {
+  padding-bottom: 0.5rem;
   border-bottom: 2px solid var(--color-light);
   font-size: 1.5rem;
 }
 
 .category_name {
   font-weight: bold;
+}
+
+/* Aside - Posts */
+
+.aside-posts {
+  margin: 5rem 0;
+}
+
+.posts-intro {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin: 5rem 0 3.5rem 0;
+}
+
+.post-title,
+.post-date {
+  font-size: 1.6rem;
+}
+
+.posts {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.post {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-areas:
+    "image title"
+    "image date";
+  gap: 0 1rem;
+}
+
+.post-link {
+  display: inline-block;
+  text-decoration: none;
+  width: 70px;
+  grid-area: image;
+}
+
+.post-img {
+  width: 100%;
+}
+
+.post-title {
+  grid-area: title;
+}
+
+.post-date {
+  grid-area: date;
+}
+
+/* Aside - Tags */
+
+.aside-tags {
+  margin: 5rem 0;
+}
+
+.tags-intro {
+  font-size: 2.5rem;
+  font-weight: bold;
+  margin-bottom: 1.5rem;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.tags a {
+  display: inline-block;
+  text-decoration: none;
+  color: inherit;
+  border: 1px solid #e0e0e0;
+  padding: 1rem 1.5rem;
 }
