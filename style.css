@@ -610,9 +610,16 @@ textarea {
   /* height: 100dvh; */
 }
 
+.main {
+  padding-top: 46px;
+}
+
 /* Navigation */
 .nav {
   background-color: var(--color-light);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
 }
 
 header > .container {
