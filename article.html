@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://cdn.tiny.cloud/1/oa5vmm7d4i57oqm9wgbzt9m3ryx8z6hittlyivwz7k6uvdaa/tinymce/6/tinymce.min.js"
+      referrerpolicy="origin"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Test CK Editor</h1>
+      <form action="">
+        <textarea name="" id="editor" cols="30" rows="30"></textarea>
+      </form>
+    </div>
+    <script src="https://cdn.ckeditor.com/ckeditor5/40.2.0/classic/ckeditor.js"></script>
+    <script>
+      ClassicEditor.create(document.querySelector("#editor")).catch((error) => {
+        console.error(error);
+      });
+    </script>
+  </body>
+</html>
