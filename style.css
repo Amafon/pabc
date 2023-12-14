@@ -614,6 +614,12 @@ textarea {
   padding-top: 63px;
 }
 
+@media screen and (max-width: 550px) {
+  .main {
+    padding-top: 52px;
+  }
+}
+
 /* Navigation */
 .nav {
   background-color: var(--color-light);
